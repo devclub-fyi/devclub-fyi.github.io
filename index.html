@@ -42,6 +42,18 @@
             #launchDate time {
                 font-weight: 600;
             }
+
+            #footer {
+                padding: 1rem;
+                color: gray;
+                position: absolute;
+                bottom: 0;
+            }
+
+            #footer__link {
+                color: cornflowerblue;
+                text-decoration: none;
+            }
         </style>
     </head>
     <body>
@@ -50,6 +62,9 @@
             <strong id="hero__subtitle">The global weekly coding session</strong>
             <span id="launchDate">🎧 Week 1 playlist – available <time datetime="2025-10-13">Monday, October 13th 2025</time></span>
         </div>
+        <footer id="footer">
+            <small><a href="https://bsky.app/profile/devclub.bsky.social" target="_blank" rel="noopener" id="footer__link">#DevClub</a> created by <a href="https://bsky.app/profile/jonrowley.bsky.social" target="_blank" rel="noopener" id="footer__link">Jon Rowley</a></small>
+        </footer>
         <!-- 100% privacy-first analytics -->
         <script async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
     </body>

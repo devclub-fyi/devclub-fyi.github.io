@@ -9,33 +9,33 @@
         <style>
             body {
                 font-family: system-ui;
+                font-size: 100%;
                 background: #000;
                 color: #fff;
             }
 
-            #hero {
-                font-size: 2em;
+            #wrapper {
+                max-width: 960px;
+                margin: 0 auto;
                 text-align: center;
-                padding: 0.5rem;
             }
 
-            #hero__title {
+            #title {
                 background-image: linear-gradient(90deg, rgb(244, 151, 248), rgb(1, 61, 171));
                 color: transparent;
                 background-clip: text;
                 margin-bottom: 1rem;
+                font-size: 4em;
             }
 
-            #hero__subtitle {
-                display: block;
+            #hero__title {
                 margin-bottom: 6rem;
-                color: whitesmoke;
             }
 
             #launchDate {
                 display: block;
                 margin-top: 3rem;
-                font-size: 0.75em;
+                font-size: 1em;
                 color: whitesmoke;
             }
 
@@ -43,24 +43,98 @@
                 font-weight: 600;
             }
 
+            #blurb {
+                color: rgba(255, 255, 255, 0.5);
+            }
+
+            #howItWorks {
+                text-align: center;
+                padding: 0 1rem;
+                margin-top: 6rem;
+            }
+
+            #steps {
+                display: block;
+                //gap: 2em;
+                list-style: none;
+                padding: 0;
+            }
+
+            .steps__step {
+                display: inline-block;
+                background-color: rgba(255, 255, 255, 0.1);
+                padding: 1em 2em;
+                border-radius: 1em;
+                font-weight: 600;
+                position: relative;
+                min-height: 5rem;
+                align-content: center;
+                margin: 0.5rem;
+                width: calc(263px - 3rem);
+                vertical-align: middle;
+            }
+
+            /* .steps__step:first-child {
+                margin-left: 0;
+            }
+
+            .steps__step:last-child {
+                margin-right: 0;
+            } */
+
+            .steps__step::before {
+                position: absolute;
+                left: 1em;
+                top: 1em;
+                font-size: small;
+            }
+
+            .steps__step:nth-child(1)::before {
+                content: '1. ';
+            }
+
+            .steps__step:nth-child(2)::before {
+                content: '2. ';
+            }
+
+            .steps__step:nth-child(3)::before {
+                content: '3. ';
+            }
+
+            #hashtag {
+                font-weight: normal;
+                font-style: italic;
+            }
+
             #footer {
                 padding: 1rem;
-                color: gray;
-                position: absolute;
-                bottom: 0;
+                color: rgba(255, 255, 255, 0.5);
             }
 
             #footer__link {
-                color: cornflowerblue;
+                color: #007aff;
+                color: -apple-system-blue;
                 text-decoration: none;
             }
         </style>
     </head>
     <body>
-        <div id="hero">
-            <h1 id="hero__title">#DevClub</h1>
-            <strong id="hero__subtitle">The global weekly coding session</strong>
-            <span id="launchDate">🎧 Week 1 playlist – available <time datetime="2025-10-13">Monday, October 13th 2025</time></span>
+        <div id="wrapper">
+            <h1 id="title">#DevClub</h1>
+            <section id="hero">
+                <h1 id="hero__title">The global weekly coding session</h1>
+                <span id="launchDate">🎧 Week 1 playlist – available <time datetime="2025-10-13">Monday, October 13th 2025</time></span>
+                <p id="blurb">Every week, developers everywhere hit play, build, then share
+    what they've made with #DevClub.</p>
+            </section>
+            <section id="howItWorks">
+                <h1>How it works</h1>
+                <ol id="steps">
+                    <li class="steps__step">Hit play on the playlist</li>
+                    <li class="steps__step">Build for 2 hours</li>
+                    <li class="steps__step">Share your progress on BlueSky – <span id="hashtag">#devclub<span></span></li>
+                </ol>
+            </section>
         </div>
         <footer id="footer">
             <small><a href="https://bsky.app/profile/devclub.bsky.social" target="_blank" rel="noopener" id="footer__link">#DevClub</a> created by <a href="https://bsky.app/profile/jonrowley.bsky.social" target="_blank" rel="noopener" id="footer__link">Jon Rowley</a></small>

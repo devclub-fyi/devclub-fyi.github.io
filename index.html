@@ -7,6 +7,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Home | #DevClub</title>
         <style>
+            html {
+                scroll-behavior: smooth;
+            }
+
             body {
                 font-family: system-ui;
                 font-size: 100%;
@@ -28,15 +32,27 @@
                 font-size: 4em;
             }
 
-            #hero__title {
-                margin-bottom: 6rem;
+            #playlist-link {
+                display: inline-block;
+                margin: 3rem;
+                font-size: 1.2em;
+                color: white;
+                padding: 1.5rem;
+                border-radius: 1rem;
+                text-decoration: none;
+                font-weight: 600;
+                border: 4px solid rgba(255, 255, 255, 0.1);
             }
 
-            #launchDate {
-                display: block;
-                margin: 3rem;
-                font-size: 1em;
-                color: whitesmoke;
+            #playlist-link span {
+                margin-left: 0.2rem;
+                font-size: 1rem;
+            }
+
+            #playlist-link:hover > span {
+                color: transparent;
+                background-clip: text;
+                background-image: linear-gradient(90deg, rgb(244, 151, 248), rgb(1, 61, 171));
             }
 
             #launchDate time {
@@ -105,6 +121,11 @@
                 font-style: italic;
             }
 
+            #playlist {
+                margin-top: 6rem;
+                padding: 0 1rem;
+            }
+
             #footer {
                 margin-top: 6rem;
                 padding: 1rem;
@@ -123,7 +144,7 @@
             <h1 id="title">#DevClub</h1>
             <section id="hero">
                 <h1 id="hero__title">The global weekly coding session</h1>
-                <span id="launchDate">🎧 Week 1 playlist – available <time datetime="2025-10-13">Monday, October 13th 2025</time></span>
+                <a href="#playlist" id="playlist-link">🎧 <span>This week's playlist</span></a>
                 <p id="blurb">Every week, developers everywhere hit play, build, then share
     what they've made with #DevClub.</p>
             </section>
@@ -134,6 +155,10 @@
                     <li class="steps__step">Build for 2 hours</li>
                     <li class="steps__step">Share your progress on BlueSky – <span id="hashtag">#devclub<span></span></li>
                 </ol>
+            </section>
+            <section id="playlist">
+                <h1>This week's playlist</h1>
+                <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/0yjXd60Dybh3f6eDChlBuS?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
             </section>
         </div>
         <footer id="footer">
